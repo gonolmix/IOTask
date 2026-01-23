@@ -32,3 +32,14 @@
 19.01.2026 12:19:04: Не удалось выполнить действие COPY для файла D:\Tests\Old\sample.txt. Причина: The file 'D:\Tests\New\sample.txt' already exists.;
 19.01.2026 12:19:06: Не удалось выполнить действие MOVE для файла D:\Tests\Old\sample.txt. Причина: Невозможно создать файл, так как он уже существует.;
 19.01.2026 12:19:10: Файл D:\Tests\Old\sample.txt создан;
+23.01.2026 19:35:36: Файл D:\Tests\Old\to_delete.txt создан;
+23.01.2026 19:35:38: Файл D:\Tests\Old\to_delete.txt удалён;
+23.01.2026 19:35:40: Файл D:\Tests\Old\sample.txt создан;
+23.01.2026 19:35:42: Текст в файле D:\Tests\Old\sample.txt приведён в верхний регистр;
+23.01.2026 19:35:44: Текст в файле D:\Tests\Old\sample.txt приведён в нижний регистр;
+23.01.2026 19:35:46: Повторы слов в файле D:\Tests\Old\sample.txt удалены;
+23.01.2026 19:35:48: Файл D:\Tests\Old\sample.txt скопирован в директорию D:\Tests\New\sample.txt;
+23.01.2026 19:35:50: Файл D:\Tests\Old\sample.txt перемещён в директорию D:\Tests\New\sample.txt;
+23.01.2026 19:35:52: Не удалось выполнить действие READ для файла D:\Tests\Old\sample.txt. Причина: Could not find file 'D:\Tests\Old\sample.txt'.;
+23.01.2026 19:35:54: Файл D:\Tests\Old\sample.txt создан;
+23.01.2026 19:36:12: Содержимое файла D:\Tests\Old\sample.txt заменено пользователем;

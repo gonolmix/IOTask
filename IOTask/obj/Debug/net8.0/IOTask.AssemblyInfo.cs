@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("IOTask")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+598bdbe10b1452986f9f0b7255afd64e18089e7f")]
 [assembly: System.Reflection.AssemblyProductAttribute("IOTask")]
 [assembly: System.Reflection.AssemblyTitleAttribute("IOTask")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -61,11 +61,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\UchH\\C#\\IOTask\\IOTask\\IOTask.csproj",
+      "projectUniqueName": "D:\\IOTask\\IOTask\\IOTask.csproj",
       "projectName": "IOTask",
-      "projectPath": "D:\\UchH\\C#\\IOTask\\IOTask\\IOTask.csproj",
+      "projectPath": "D:\\IOTask\\IOTask\\IOTask.csproj",
       "packagesPath": "C:\\Users\\gonol\\.nuget\\packages\\",
-      "outputPath": "D:\\UchH\\C#\\IOTask\\IOTask\\obj\\",
+      "outputPath": "D:\\IOTask\\IOTask\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\VIsual Studio\\3\\NuGetPackages"
