@@ -1,20 +1,13 @@
 ﻿using IOTask.Enums;
 using IOTask.Loggers;
-using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Collections.Specialized.BitVector32;
 
 namespace IOTask.FileProcessorClass
 {
     public class FileProcessor
     {
-        public FileInformation _fileInformation;
-        public ILogger _logger;
-        public IFileActionExecutor _executor;
+        private readonly FileInformation _fileInformation;
+        private readonly ILogger _logger;
+        private readonly IFileActionExecutor _executor;
 
 
         public FileProcessor(FileInformation fileInformation, ILogger fileLogger, IFileActionExecutor executor)
@@ -24,15 +17,22 @@ namespace IOTask.FileProcessorClass
             _executor = executor;
         }
 
-        public async Task RunAsync(int delay, string? oldtext = null, string? newtext = null)
+        public async Task RunAsync(int delay, string? oldText = null, string? newText = null)
         {
+            if (string.IsNullOrEmpty(_fileInformation.FilePath))
+                throw new ArgumentException("FilePath не может быть пустым", nameof(_fileInformation.FilePath));
+
+            if (delay < 0)
+                throw new ArgumentException("Delay не может быть отрицательным", nameof(delay));
+
             await Task.Delay(delay);
+
             switch (_fileInformation.Action)
             {
                 case FileActions.CREATE:
 
-                    await ExecuteAction(() => _executor.CreateFile(_fileInformation.FilePath));
-
+                    await ExecuteAction(() => _executor.CreateFile(_fileInformation.FilePath, _fileInformation.Content));
+                    
                     break;
 
                 case FileActions.DELETE:
@@ -61,27 +61,22 @@ namespace IOTask.FileProcessorClass
 
                 case FileActions.COPY:
 
-                    if (_fileInformation.Params == null)
-                    {
-                        throw new InvalidOperationException($"Параметр 'params' обязателен для действия {_fileInformation.Action}");
+                    if (string.IsNullOrEmpty(_fileInformation.DestinationPath))
+                    { 
+                        throw new InvalidOperationException($"Для действия COPY в {_fileInformation.FilePath} требуется destinationPath");
                     }
-                    else
-                    {
-                        await ExecuteAction(() => _executor.CopyFile(_fileInformation.FilePath, _fileInformation.Params));
-                    }
-
+                    await ExecuteAction(() => _executor.CopyFile(_fileInformation.FilePath, _fileInformation.DestinationPath));
+                    
                     break;
+
 
                 case FileActions.MOVE:
 
-                    if (_fileInformation.Params == null)
-                    {
-                        throw new InvalidOperationException($"Параметр 'params' обязателен для действия {_fileInformation.Action}");
+                    if (string.IsNullOrEmpty(_fileInformation.DestinationPath))
+                    { 
+                        throw new InvalidOperationException($"Для действия MOVEв файле {_fileInformation.FilePath} требуется destinationPath");
                     }
-                    else
-                    {
-                        await ExecuteAction(() => _executor.MoveFile(_fileInformation.FilePath, _fileInformation.Params));
-                    }
+                    await ExecuteAction(() => _executor.MoveFile(_fileInformation.FilePath, _fileInformation.DestinationPath));
 
                     break;
 
@@ -93,13 +88,13 @@ namespace IOTask.FileProcessorClass
 
                 case FileActions.REPLACE:
 
-                    if (newtext == null || oldtext == null)
+                    if (newText == null || oldText == null)
                     {
                         throw new InvalidOperationException($"Отсутствует текст для замены в файле {_fileInformation.FilePath}!");
                     }
                     else
                     {
-                        await ExecuteAction(() => _executor.ReplaceText(_fileInformation.FilePath, oldtext, newtext));
+                        await ExecuteAction(() => _executor.ReplaceText(_fileInformation.FilePath, oldText, newText));
                     }
 
                     break;
@@ -116,11 +111,11 @@ namespace IOTask.FileProcessorClass
             try
             {
                 await action();
-                await _logger.LogAsync(_fileInformation.Action, _fileInformation.FilePath, _fileInformation.Params);
+                await _logger.LogAsync(_fileInformation.Action, _fileInformation.FilePath, _fileInformation.Content, _fileInformation.DestinationPath);
             }
             catch (Exception e)
             {
-                await _logger.LogAsync(_fileInformation.Action, _fileInformation.FilePath, _fileInformation.Params, e.Message);
+                await _logger.LogAsync(_fileInformation.Action, _fileInformation.FilePath, _fileInformation.Content, _fileInformation.DestinationPath, e.Message);
             }
         }
     }

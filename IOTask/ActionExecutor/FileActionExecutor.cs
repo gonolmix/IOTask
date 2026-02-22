@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
+﻿using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace IOTask
 {
@@ -19,10 +14,11 @@ namespace IOTask
             await File.WriteAllTextAsync(filePath, content ?? string.Empty);
         }
 
-        public async Task DeleteFile(string filePath)
+        public Task DeleteFile(string filePath)
         {
             if (File.Exists(filePath))
-               await Task.Run(() => File.Delete(filePath));
+                File.Delete(filePath);
+            return Task.CompletedTask;
         }
 
         public async Task ToUpperCase(string filePath)
@@ -37,6 +33,8 @@ namespace IOTask
             await File.WriteAllTextAsync(filePath, text.ToLower());
         }
 
+        /// Удаляет повторяющиеся слова, сохраняя структуру текста.
+        /// Подходит для небольших файлов на латинице (<100MB).
         public async Task RemoveDups(string filePath)
         {
             var text = await File.ReadAllTextAsync(filePath);
@@ -57,22 +55,24 @@ namespace IOTask
             await File.WriteAllTextAsync(filePath, result.ToString());
         }
 
-        public async Task CopyFile(string sourcePath, string destinationPath)
+        public Task CopyFile(string sourcePath, string destinationPath)
         {
             var destDir = Path.GetDirectoryName(destinationPath);
             if (!string.IsNullOrEmpty(destDir))
                 Directory.CreateDirectory(destDir);
 
-            await Task.Run(() => File.Copy(sourcePath, destinationPath, overwrite: true));
+            File.Copy(sourcePath, destinationPath, overwrite: true);
+            return Task.CompletedTask;
         }
 
-        public async Task MoveFile(string sourcePath, string destinationPath)
+        public Task MoveFile(string sourcePath, string destinationPath)
         {
             var destDir = Path.GetDirectoryName(destinationPath);
             if (!string.IsNullOrEmpty(destDir))
                 Directory.CreateDirectory(destDir);
 
-            await Task.Run(() => File.Move(sourcePath, destinationPath, overwrite: true));
+            File.Move(sourcePath, destinationPath, overwrite: true);
+            return Task.CompletedTask;
         }
 
         public async Task ReadFile(string filePath)

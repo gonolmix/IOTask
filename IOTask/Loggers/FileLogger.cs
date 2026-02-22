@@ -1,9 +1,4 @@
 ﻿using IOTask.Enums;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace IOTask.Loggers
 {
@@ -11,96 +6,40 @@ namespace IOTask.Loggers
     {
         private const string LogFileName = "log.txt";
 
-        public async Task LogAsync(FileActions action, string filePath, string? @params = null, string? errorMessage = null)
+        public async Task LogAsync(FileActions action, string filePath, string? content = null, string? destinationPath = null, string? errorMessage = null)
         {
-            if (errorMessage == null)
+            try
             {
-                switch (action)
-                {
-                    case FileActions.CREATE:
-
-                        var createMessage = $"{DateTime.Now}: Файл {filePath} создан;\n";
-                        await File.AppendAllTextAsync(LogFileName, createMessage);
-                        Console.WriteLine(createMessage);
-
-                        break;
-
-                    case FileActions.DELETE:
-
-                        var deleteMessage = $"{DateTime.Now}: Файл {filePath} удалён;\n";
-                        await File.AppendAllTextAsync(LogFileName, deleteMessage);
-                        Console.WriteLine(deleteMessage);
-
-                        break;
-
-                    case FileActions.UPPERCASE:
-
-                        var upperCaseMessage = $"{DateTime.Now}: Текст в файле {filePath} приведён в верхний регистр;\n";
-                        await File.AppendAllTextAsync(LogFileName, upperCaseMessage);
-                        Console.WriteLine(upperCaseMessage);
-
-                        break;
-
-                    case FileActions.LOWERCASE:
-
-                        var lowerCaseMessage = $"{DateTime.Now}: Текст в файле {filePath} приведён в нижний регистр;\n";
-                        await File.AppendAllTextAsync(LogFileName, lowerCaseMessage);
-                        Console.WriteLine(lowerCaseMessage);
-
-                        break;
-
-                    case FileActions.REMOVEDUPS:
-
-                        var removeDupsMessage = $"{DateTime.Now}: Повторы слов в файле {filePath} удалены;\n";
-                        await File.AppendAllTextAsync(LogFileName, removeDupsMessage);
-                        Console.WriteLine(removeDupsMessage);
-
-                        break;
-
-                    case FileActions.COPY:
-
-                        var copyMessage = $"{DateTime.Now}: Файл {filePath} скопирован в директорию {@params};\n";
-                        await File.AppendAllTextAsync(LogFileName, copyMessage);
-                        Console.WriteLine(copyMessage);
-
-                        break;
-
-                    case FileActions.MOVE:
-
-                        var moveMessage = $"{DateTime.Now}: Файл {filePath} перемещён в директорию {@params};\n";
-                        await File.AppendAllTextAsync(LogFileName, moveMessage);
-                        Console.WriteLine(moveMessage);
-
-                        break;
-
-                    case FileActions.READ:
-
-                        var readMessage = $"{DateTime.Now}: Содержимое файла {filePath} выведено в консоли;\n";
-                        await File.AppendAllTextAsync(LogFileName, readMessage);
-                        Console.WriteLine(readMessage);
-
-                        break;
-
-                    case FileActions.REPLACE:
-
-                        var replaceMessage = $"{DateTime.Now}: Содержимое файла {filePath} заменено пользователем;\n";
-                        await File.AppendAllTextAsync(LogFileName, replaceMessage);
-                        Console.WriteLine(replaceMessage);
-
-                        break;
-
-                    default:
-
-                        throw new NotImplementedException("Действие не распознано!");
-
-                }
+                string message = FormatMessage(action, filePath, content, destinationPath, errorMessage);
+                await File.AppendAllTextAsync(LogFileName, message + Environment.NewLine);
+                Console.WriteLine(message);
             }
-            else
+            catch (Exception ex)
             {
-                var exceptionMessage = $"{DateTime.Now}: Не удалось выполнить действие {action} для файла {filePath}. Причина: {errorMessage};\n";
-                await File.AppendAllTextAsync(LogFileName, exceptionMessage);
-                Console.WriteLine(exceptionMessage);
+                Console.Error.WriteLine($"Ошибка: {ex.Message}");
             }
         }
+
+        private static string FormatMessage(FileActions action, string filePath, string? content, string? destinationPath, string? errorMessage)
+        {
+            if (errorMessage != null)
+                return $"{DateTime.Now}: Не удалось выполнить действие {action} для файла {filePath}. Причина: {errorMessage};";
+
+            return action switch
+            {
+                FileActions.CREATE => $"{DateTime.Now}: Файл {filePath} создан;",
+                FileActions.DELETE => $"{DateTime.Now}: Файл {filePath} удалён;",
+                FileActions.UPPERCASE => $"{DateTime.Now}: Текст в файле {filePath} приведён в верхний регистр;",
+                FileActions.LOWERCASE => $"{DateTime.Now}: Текст в файле {filePath} приведён в нижний регистр;",
+                FileActions.REMOVEDUPS => $"{DateTime.Now}: Повторы слов в файле {filePath} удалены;",
+                FileActions.COPY => $"{DateTime.Now}: Файл {filePath} скопирован в директорию {destinationPath};",
+                FileActions.MOVE => $"{DateTime.Now}: Файл {filePath} перемещён в директорию {destinationPath};",
+                FileActions.READ => $"{DateTime.Now}: Содержимое файла {filePath} выведено в консоли;",
+                FileActions.REPLACE => $"{DateTime.Now}: Содержимое файла {filePath} заменено пользователем;",
+                _ => $"Неизвестное действие: {action}"
+            };
+        }
+
+
     }
 }
