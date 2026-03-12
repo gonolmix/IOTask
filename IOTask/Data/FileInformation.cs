@@ -16,5 +16,11 @@ namespace IOTask
 
         [JsonProperty("destinationPath")]
         public string? DestinationPath { get; set; }
+
+        [JsonProperty("oldText")]
+        public string? OldText { get; set; }
+
+        [JsonProperty("newText")]
+        public string? NewText { get; set; }
     }
 }

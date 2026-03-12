@@ -9,5 +9,9 @@ namespace IOTask.Data
 
         [JsonProperty("delay")]
         public int Delay { get; set; }
+
+        [JsonProperty("baseDirectory")]
+
+        public string BaseDirectory { get; set; } = "D:/Tests/";
     }
 }

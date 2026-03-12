@@ -16,21 +16,23 @@ namespace IOTask
 
         public Task DeleteFile(string filePath)
         {
-            if (File.Exists(filePath))
-                File.Delete(filePath);
+            if (!File.Exists(filePath))
+                throw new FileNotFoundException($"File not found: {filePath}");
+                
+            File.Delete(filePath);
             return Task.CompletedTask;
         }
 
         public async Task ToUpperCase(string filePath)
         {
             var text = await File.ReadAllTextAsync(filePath);
-            await File.WriteAllTextAsync(filePath, text.ToUpper());
+            await File.WriteAllTextAsync(filePath, text.ToUpperInvariant());
         }
 
         public async Task ToLowerCase(string filePath)
         {
             var text = await File.ReadAllTextAsync(filePath);
-            await File.WriteAllTextAsync(filePath, text.ToLower());
+            await File.WriteAllTextAsync(filePath, text.ToLowerInvariant());
         }
 
         /// Удаляет повторяющиеся слова, сохраняя структуру текста.

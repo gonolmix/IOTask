@@ -10,8 +10,6 @@ namespace IOTask
             static async Task<int> Main(string[] args)
             {
                 const string settingsFile = "settings.json";
-                const string oldText = "old";
-                const string newText = "new";
 
                 int errorCount = 0;
 
@@ -52,12 +50,13 @@ namespace IOTask
                     //}
                         try
                         {
-                            var processor = new FileProcessor(fileOp, logger, executor);
-                            await processor.RunAsync(settings.Delay, oldText, newText);
+                            var processor = new FileProcessor(fileOp, logger, executor, settings.BaseDirectory);
+                            await processor.RunAsync(settings.Delay);
                         }
                         catch (Exception ex)
                         {
                             errorCount++;
+                            Console.WriteLine($"Error with {fileOp.Action} for {fileOp.FilePath}: {ex.Message}");
                         }
                     }
                     if (errorCount > 0)
