@@ -37,17 +37,6 @@ namespace IOTask
 
                     foreach (var fileOp in settings.Files)
                     {
-                    //string? oldText = null;
-                    //string? newText = null;
-
-                    //if (fileOp.Action == Enums.FileActions.REPLACE)
-                    //{
-                    //    Console.WriteLine($"\nЗамена текста в файле: {fileOp.FilePath}");
-                    //    Console.Write("Введите текст для замены: ");
-                    //    oldText = Console.ReadLine();
-                    //    Console.Write("Введите новый текст: ");
-                    //    newText = Console.ReadLine();
-                    //}
                         try
                         {
                             var processor = new FileProcessor(fileOp, logger, executor, settings.BaseDirectory);

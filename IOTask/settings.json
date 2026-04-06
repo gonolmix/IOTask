@@ -53,7 +53,8 @@
     {
       "path": "D:/Tests/Old/sample.txt",
       "action": "REPLACE",
-      "content": null
+      "oldText": "old",
+      "newText":  "new"
     }
   ],
   "delay": 2000
