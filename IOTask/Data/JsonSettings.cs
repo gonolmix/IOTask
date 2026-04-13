@@ -12,6 +12,6 @@ namespace IOTask.Data
 
         [JsonProperty("baseDirectory")]
 
-        public string BaseDirectory { get; set; } = "D:/Tests/";
+        public string BaseDirectory { get; set; } = "./";
     }
 }

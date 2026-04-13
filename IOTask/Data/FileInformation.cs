@@ -1,14 +1,15 @@
 ﻿using IOTask.Enums;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace IOTask
 {
     public class FileInformation
     {
         [JsonProperty("path")]
-        public string FilePath { get; set; }
+        public string? FilePath { get; set; }
 
-        [JsonProperty("action")]
+        [JsonProperty("action"), JsonConverter(typeof(StringEnumConverter))]
         public FileActions Action { get; set; }
 
         [JsonProperty("content")]

@@ -36,7 +36,8 @@ namespace IOTask
         }
 
         /// Удаляет повторяющиеся слова, сохраняя структуру текста.
-        /// Подходит для небольших файлов на латинице (<100MB).
+        /// Подходит для небольших файлов (<100MB).
+        /// Поддерживает Unicode 
         public async Task RemoveDups(string filePath)
         {
             var text = await File.ReadAllTextAsync(filePath);
@@ -87,7 +88,7 @@ namespace IOTask
         {
             if (string.IsNullOrEmpty(oldText))
             {
-                return;
+                throw new ArgumentException("oldText не может быть пустым", nameof(oldText));
             }
 
             var content = await File.ReadAllTextAsync(filePath);

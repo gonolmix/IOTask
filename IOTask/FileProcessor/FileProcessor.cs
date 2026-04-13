@@ -1,5 +1,6 @@
 ﻿using IOTask.Enums;
 using IOTask.Loggers;
+using System.Security;
 
 namespace IOTask.FileProcessorClass
 {
@@ -84,7 +85,7 @@ namespace IOTask.FileProcessorClass
 
                     if (string.IsNullOrEmpty(safeDestinationPath))
                     { 
-                        throw new InvalidOperationException($"Для действия MOVEв файле {_fileInformation.FilePath} требуется destinationPath");
+                        throw new InvalidOperationException($"Для действия MOVE в файле {_fileInformation.FilePath} требуется destinationPath");
                     }
                     await ExecuteAction(() => _executor.MoveFile(safeSourcePath, safeDestinationPath));
 
@@ -131,20 +132,16 @@ namespace IOTask.FileProcessorClass
             if (string.IsNullOrEmpty(inputPath))
                 throw new ArgumentException("Путь не может быть пустым", nameof(inputPath));
 
-            var fullPath = Path.GetFullPath(Path.Combine(_basePath, inputPath));
+            var combinedPath = Path.Combine(_basePath, inputPath);
+            var fullPath = Path.GetFullPath(combinedPath);
             var fullBase = Path.GetFullPath(_basePath);
 
-            if (!fullBase.EndsWith(Path.DirectorySeparatorChar) &&
-                !fullBase.EndsWith(Path.AltDirectorySeparatorChar))
-            {
+            if (!fullBase.EndsWith(Path.DirectorySeparatorChar))
                 fullBase += Path.DirectorySeparatorChar;
-            }
 
-            if (!fullPath.StartsWith(fullBase, StringComparison.OrdinalIgnoreCase) &&
-                !fullPath.Equals(fullBase.TrimEnd(Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar),
-                                 StringComparison.OrdinalIgnoreCase))
+            if (!fullPath.StartsWith(fullBase, StringComparison.OrdinalIgnoreCase))
             {
-                throw new ArgumentException(
+                throw new SecurityException(
                     $"Path '{inputPath}' is outside base directory '{_basePath}'.\n" +
                     $"Full path: {fullPath}\n" +
                     $"Base directory: {fullBase}");

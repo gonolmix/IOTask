@@ -9,7 +9,7 @@ namespace IOTask
     {
             static async Task<int> Main(string[] args)
             {
-                const string settingsFile = "settings.json";
+                string settingsFile = args.Length > 0 ? args[0] : "settings.json";
 
                 int errorCount = 0;
 
@@ -31,6 +31,11 @@ namespace IOTask
 
                     if (settings.Files == null)
                         throw new InvalidOperationException("Раздел 'files' отсутствует в settings.json.");
+
+                    if (settings.Files.Count == 0)
+                {
+                    throw new InvalidOperationException("Массив files пуст.");
+                }
 
                     var logger = new FileLogger();
                     var executor = new FileActionExecutor();
@@ -61,7 +66,6 @@ namespace IOTask
                 catch (Exception ex)
                 {
                     Console.WriteLine($"\nОшибка: {ex.Message}");
-                    Console.WriteLine("Причина: " + ex.ToString());
                     return 1;
                 }
             }

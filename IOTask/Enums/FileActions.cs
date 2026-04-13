@@ -11,5 +11,5 @@
         MOVE,
         READ,
         REPLACE
-}
+    }
 }
