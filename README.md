@@ -31,18 +31,60 @@ JSON reader console app
 {
   "files": [
     {
-      "path": "input.txt",
+      "path": "/Tests/Old/to_delete.txt",
       "action": "CREATE",
-      "content": "Hello World"
+      "content": "Этот файл будет удалён."
     },
     {
-      "path": "source.txt",
+      "path": "/Tests/Old/to_delete.txt",
+      "action": "DELETE",
+      "content": null
+    },
+    {
+      "path": "/Tests/Old/sample.txt",
+      "action": "CREATE",
+      "content": "Привет, мир! Это тестовый файл. Привет ещё раз."
+    },
+    {
+      "path": "/Tests/Old/sample.txt",
+      "action": "UPPERCASE",
+      "content": null
+    },
+    {
+      "path": "/Tests/Old/sample.txt",
+      "action": "LOWERCASE",
+      "content": null
+    },
+    {
+      "path": "/Tests/Old/sample.txt",
+      "action": "REMOVEDUPS",
+      "content": null
+    },
+    {
+      "path": "/Tests/Old/sample.txt",
       "action": "COPY",
-      "destinationPath": "backup/source.txt"
+      "destinationPath": "D:/Tests/New/sample.txt"
     },
     {
-      "path": "data.txt",
-      "action": "REPLACE"
+      "path": "/Tests/Old/sample.txt",
+      "action": "MOVE",
+      "destinationPath": "D:/Tests/New/sample.txt"
+    },
+    {
+      "path": "/Tests/Old/sample.txt",
+      "action": "READ",
+      "content": null
+    },
+    {
+      "path": "/Tests/Old/sample.txt",
+      "action": "CREATE",
+      "content": "Замени меня, пожалуйста!"
+    },
+    {
+      "path": "/Tests/Old/sample.txt",
+      "action": "REPLACE",
+      "oldText": "old",
+      "newText":  "new"
     }
   ],
   "delay": 1000
