@@ -31,61 +31,62 @@ JSON reader console app
 {
   "files": [
     {
-      "path": "/Tests/Old/to_delete.txt",
+      "path": "Tests/Old/to_delete.txt",
       "action": "CREATE",
       "content": "Этот файл будет удалён."
     },
     {
-      "path": "/Tests/Old/to_delete.txt",
+      "path": "Tests/Old/to_delete.txt",
       "action": "DELETE",
       "content": null
     },
     {
-      "path": "/Tests/Old/sample.txt",
+      "path": "Tests/Old/sample.txt",
       "action": "CREATE",
       "content": "Привет, мир! Это тестовый файл. Привет ещё раз."
     },
     {
-      "path": "/Tests/Old/sample.txt",
+      "path": "Tests/Old/sample.txt",
       "action": "UPPERCASE",
       "content": null
     },
     {
-      "path": "/Tests/Old/sample.txt",
+      "path": "Tests/Old/sample.txt",
       "action": "LOWERCASE",
       "content": null
     },
     {
-      "path": "/Tests/Old/sample.txt",
+      "path": "Tests/Old/sample.txt",
       "action": "REMOVEDUPS",
       "content": null
     },
     {
-      "path": "/Tests/Old/sample.txt",
+      "path": "Tests/Old/sample.txt",
       "action": "COPY",
-      "destinationPath": "D:/Tests/New/sample.txt"
+      "destinationPath": "Tests/New/sample.txt"
     },
     {
-      "path": "/Tests/Old/sample.txt",
+      "path": "Tests/Old/sample.txt",
       "action": "MOVE",
-      "destinationPath": "D:/Tests/New/sample.txt"
+      "destinationPath": "Tests/New/sample.txt"
     },
     {
-      "path": "/Tests/Old/sample.txt",
+      "path": "Tests/Old/sample.txt",
       "action": "READ",
       "content": null
     },
     {
-      "path": "/Tests/Old/sample.txt",
+      "path": "/ests/Old/sample.txt",
       "action": "CREATE",
       "content": "Замени меня, пожалуйста!"
     },
     {
-      "path": "/Tests/Old/sample.txt",
+      "path": "Tests/Old/sample.txt",
       "action": "REPLACE",
       "oldText": "old",
       "newText":  "new"
     }
   ],
-  "delay": 1000
+  "delay": 1000,
+  "baseDirectory": "./"
 }
