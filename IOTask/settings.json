@@ -1,61 +1,62 @@
 {
   "files": [
     {
-      "path": "D:/Tests/Old/to_delete.txt",
+      "path": "./Tests/Old/to_delete.txt",
       "action": "CREATE",
       "content": "Этот файл будет удалён."
     },
     {
-      "path": "D:/Tests/Old/to_delete.txt",
+      "path": "./Tests/Old/to_delete.txt",
       "action": "DELETE",
       "content": null
     },
     {
-      "path": "D:/Tests/Old/sample.txt",
+      "path": "./Tests/Old/sample.txt",
       "action": "CREATE",
       "content": "Привет, мир! Это тестовый файл. Привет ещё раз."
     },
     {
-      "path": "D:/Tests/Old/sample.txt",
+      "path": "./Tests/Old/sample.txt",
       "action": "UPPERCASE",
       "content": null
     },
     {
-      "path": "D:/Tests/Old/sample.txt",
+      "path": "./Tests/Old/sample.txt",
       "action": "LOWERCASE",
       "content": null
     },
     {
-      "path": "D:/Tests/Old/sample.txt",
+      "path": "./Tests/Old/sample.txt",
       "action": "REMOVEDUPS",
       "content": null
     },
     {
-      "path": "D:/Tests/Old/sample.txt",
+      "path": "./Tests/Old/sample.txt",
       "action": "COPY",
-      "destinationPath": "D:/Tests/New/sample.txt"
+      "destinationPath": "./Tests/New/sample.txt"
     },
     {
-      "path": "D:/Tests/Old/sample.txt",
+      "path": "./Tests/Old/sample.txt",
       "action": "MOVE",
-      "destinationPath": "D:/Tests/New/sample.txt"
+      "destinationPath": "./Tests/New/sample.txt"
     },
     {
-      "path": "D:/Tests/Old/sample.txt",
+      "path": "./Tests/Old/sample.txt",
       "action": "READ",
       "content": null
     },
     {
-      "path": "D:/Tests/Old/sample.txt",
+      "path": "./Tests/Old/sample.txt",
       "action": "CREATE",
       "content": "Замени меня, пожалуйста!"
     },
     {
-      "path": "D:/Tests/Old/sample.txt",
+      "path": "./Tests/Old/sample.txt",
       "action": "REPLACE",
       "oldText": "old",
-      "newText":  "new"
+      "newText": "new"
     }
   ],
-  "delay": 2000
+  "delay": 2000,
+  "baseDirectory": "./JsonReader"
 }

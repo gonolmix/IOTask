@@ -25,6 +25,7 @@ namespace IOTask.Loggers
             catch (Exception ex)
             {
                 Console.Error.WriteLine($"Ошибка: {ex.Message}");
+                throw;
             }
         }
 

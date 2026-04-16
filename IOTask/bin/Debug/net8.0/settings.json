@@ -1,60 +1,62 @@
 {
   "files": [
     {
-      "path": "D:\\Tests\\Old\\to_delete.txt",
+      "path": "./Tests/Old/to_delete.txt",
       "action": "CREATE",
-      "params": "Этот файл будет удалён."
+      "content": "Этот файл будет удалён."
     },
     {
-      "path": "D:\\Tests\\Old\\to_delete.txt",
+      "path": "./Tests/Old/to_delete.txt",
       "action": "DELETE",
-      "params": null
+      "content": null
     },
     {
-      "path": "D:\\Tests\\Old\\sample.txt",
+      "path": "./Tests/Old/sample.txt",
       "action": "CREATE",
-      "params": "Привет, мир! Это тестовый файл. Привет ещё раз."
+      "content": "Привет, мир! Это тестовый файл. Привет ещё раз."
     },
     {
-      "path": "D:\\Tests\\Old\\sample.txt",
+      "path": "./Tests/Old/sample.txt",
       "action": "UPPERCASE",
-      "params": null
+      "content": null
     },
     {
-      "path": "D:\\Tests\\Old\\sample.txt",
+      "path": "./Tests/Old/sample.txt",
       "action": "LOWERCASE",
-      "params": null
+      "content": null
     },
     {
-      "path": "D:\\Tests\\Old\\sample.txt",
+      "path": "./Tests/Old/sample.txt",
       "action": "REMOVEDUPS",
-      "params": null
+      "content": null
     },
     {
-      "path": "D:\\Tests\\Old\\sample.txt",
+      "path": "./Tests/Old/sample.txt",
       "action": "COPY",
-      "params": "D:\\Tests\\New\\sample.txt"
+      "destinationPath": "./Tests/New/sample.txt"
     },
     {
-      "path": "D:\\Tests\\Old\\sample.txt",
+      "path": "./Tests/Old/sample.txt",
       "action": "MOVE",
-      "params": "D:\\Tests\\New\\sample.txt"
+      "destinationPath": "./Tests/New/sample.txt"
     },
     {
-      "path": "D:\\Tests\\Old\\sample.txt",
+      "path": "./Tests/Old/sample.txt",
       "action": "READ",
-      "params": null
+      "content": null
     },
     {
-      "path": "D:\\Tests\\Old\\sample.txt",
+      "path": "./Tests/Old/sample.txt",
       "action": "CREATE",
-      "params": "Замени меня, пожалуйста!"
+      "content": "Замени меня, пожалуйста!"
     },
     {
-      "path": "D:\\Tests\\Old\\sample.txt",
+      "path": "./Tests/Old/sample.txt",
       "action": "REPLACE",
-      "params": null
+      "oldText": "old",
+      "newText": "new"
     }
   ],
-  "delay": 2000
+  "delay": 2000,
+  "baseDirectory": "./JsonReader"
 }

@@ -62,7 +62,7 @@ namespace IOTask
                     Console.WriteLine("\nОбработка завершена успешно.");
                     return 0;
 
-            }
+                }
                 catch (Exception ex)
                 {
                     Console.WriteLine($"\nОшибка: {ex.Message}");

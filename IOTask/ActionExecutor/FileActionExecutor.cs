@@ -25,12 +25,18 @@ namespace IOTask
 
         public async Task ToUpperCase(string filePath)
         {
+            if (!File.Exists(filePath))
+                throw new FileNotFoundException($"Файл не найден: {filePath}");
+
             var text = await File.ReadAllTextAsync(filePath);
             await File.WriteAllTextAsync(filePath, text.ToUpperInvariant());
         }
 
         public async Task ToLowerCase(string filePath)
         {
+            if (!File.Exists(filePath))
+                throw new FileNotFoundException($"Файл не найден: {filePath}");
+
             var text = await File.ReadAllTextAsync(filePath);
             await File.WriteAllTextAsync(filePath, text.ToLowerInvariant());
         }
@@ -40,6 +46,15 @@ namespace IOTask
         /// Поддерживает Unicode 
         public async Task RemoveDups(string filePath)
         {
+            if (!File.Exists(filePath))
+                throw new FileNotFoundException($"Файл не найден: {filePath}");
+
+            const long MaxFileSizeBytes = 100 * 1024 * 1024;
+
+            var fileInfo = new FileInfo(filePath);
+            if (fileInfo.Length > MaxFileSizeBytes)
+                throw new InvalidOperationException($"Файл {filePath} слишком большой для обработки (>100 МБ)");
+
             var text = await File.ReadAllTextAsync(filePath);
             var matches = Regex.Matches(text, @"\b\w+\b");
             var seen = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
@@ -80,12 +95,18 @@ namespace IOTask
 
         public async Task ReadFile(string filePath)
         {
+            if (!File.Exists(filePath))
+                throw new FileNotFoundException($"Файл не найден: {filePath}");
+
             var content = await File.ReadAllTextAsync(filePath);
             Console.WriteLine(content);
         }
 
         public async Task ReplaceText(string filePath, string oldText, string newText)
         {
+            if (!File.Exists(filePath))
+                throw new FileNotFoundException($"Файл не найден: {filePath}");
+
             if (string.IsNullOrEmpty(oldText))
             {
                 throw new ArgumentException("oldText не может быть пустым", nameof(oldText));
