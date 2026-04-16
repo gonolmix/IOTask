@@ -1,0 +1,223 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\IOTask\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{35DC5C12-C3A9-470C-8FA8-7B7D19DE3182}|IOTask\\IOTask.csproj|d:\\iotask\\iotask\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35DC5C12-C3A9-470C-8FA8-7B7D19DE3182}|IOTask\\IOTask.csproj|solutionrelative:iotask\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35DC5C12-C3A9-470C-8FA8-7B7D19DE3182}|IOTask\\IOTask.csproj|d:\\iotask\\iotask\\actionexecutor\\ifileactionexecutor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35DC5C12-C3A9-470C-8FA8-7B7D19DE3182}|IOTask\\IOTask.csproj|solutionrelative:iotask\\actionexecutor\\ifileactionexecutor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35DC5C12-C3A9-470C-8FA8-7B7D19DE3182}|IOTask\\IOTask.csproj|d:\\iotask\\iotask\\settings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{35DC5C12-C3A9-470C-8FA8-7B7D19DE3182}|IOTask\\IOTask.csproj|solutionrelative:iotask\\settings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35DC5C12-C3A9-470C-8FA8-7B7D19DE3182}|IOTask\\IOTask.csproj|d:\\iotask\\iotask\\loggers\\ilogger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35DC5C12-C3A9-470C-8FA8-7B7D19DE3182}|IOTask\\IOTask.csproj|solutionrelative:iotask\\loggers\\ilogger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35DC5C12-C3A9-470C-8FA8-7B7D19DE3182}|IOTask\\IOTask.csproj|d:\\iotask\\iotask\\loggers\\filelogger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35DC5C12-C3A9-470C-8FA8-7B7D19DE3182}|IOTask\\IOTask.csproj|solutionrelative:iotask\\loggers\\filelogger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35DC5C12-C3A9-470C-8FA8-7B7D19DE3182}|IOTask\\IOTask.csproj|d:\\iotask\\iotask\\fileprocessor\\fileprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35DC5C12-C3A9-470C-8FA8-7B7D19DE3182}|IOTask\\IOTask.csproj|solutionrelative:iotask\\fileprocessor\\fileprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35DC5C12-C3A9-470C-8FA8-7B7D19DE3182}|IOTask\\IOTask.csproj|d:\\iotask\\iotask\\enums\\fileactions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35DC5C12-C3A9-470C-8FA8-7B7D19DE3182}|IOTask\\IOTask.csproj|solutionrelative:iotask\\enums\\fileactions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35DC5C12-C3A9-470C-8FA8-7B7D19DE3182}|IOTask\\IOTask.csproj|d:\\iotask\\iotask\\data\\jsonsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35DC5C12-C3A9-470C-8FA8-7B7D19DE3182}|IOTask\\IOTask.csproj|solutionrelative:iotask\\data\\jsonsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35DC5C12-C3A9-470C-8FA8-7B7D19DE3182}|IOTask\\IOTask.csproj|d:\\iotask\\iotask\\data\\fileinformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35DC5C12-C3A9-470C-8FA8-7B7D19DE3182}|IOTask\\IOTask.csproj|solutionrelative:iotask\\data\\fileinformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35DC5C12-C3A9-470C-8FA8-7B7D19DE3182}|IOTask\\IOTask.csproj|d:\\iotask\\iotask\\actionexecutor\\fileactionexecutor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35DC5C12-C3A9-470C-8FA8-7B7D19DE3182}|IOTask\\IOTask.csproj|solutionrelative:iotask\\actionexecutor\\fileactionexecutor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35DC5C12-C3A9-470C-8FA8-7B7D19DE3182}|IOTask\\IOTask.csproj|d:\\iotask\\iotask\\iotask.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{35DC5C12-C3A9-470C-8FA8-7B7D19DE3182}|IOTask\\IOTask.csproj|solutionrelative:iotask\\iotask.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "settings.json",
+              "DocumentMoniker": "D:\\IOTask\\IOTask\\settings.json",
+              "RelativeDocumentMoniker": "IOTask\\settings.json",
+              "ToolTip": "D:\\IOTask\\IOTask\\settings.json",
+              "RelativeToolTip": "IOTask\\settings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-01-23T16:27:30.015Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IFileActionExecutor.cs",
+              "DocumentMoniker": "D:\\IOTask\\IOTask\\ActionExecutor\\IFileActionExecutor.cs",
+              "RelativeDocumentMoniker": "IOTask\\ActionExecutor\\IFileActionExecutor.cs",
+              "ToolTip": "D:\\IOTask\\IOTask\\ActionExecutor\\IFileActionExecutor.cs",
+              "RelativeToolTip": "IOTask\\ActionExecutor\\IFileActionExecutor.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAowB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T16:25:44.193Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FileActionExecutor.cs",
+              "DocumentMoniker": "D:\\IOTask\\IOTask\\ActionExecutor\\FileActionExecutor.cs",
+              "RelativeDocumentMoniker": "IOTask\\ActionExecutor\\FileActionExecutor.cs",
+              "ToolTip": "D:\\IOTask\\IOTask\\ActionExecutor\\FileActionExecutor.cs",
+              "RelativeToolTip": "IOTask\\ActionExecutor\\FileActionExecutor.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAYwGEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T16:25:39.009Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FileLogger.cs",
+              "DocumentMoniker": "D:\\IOTask\\IOTask\\Loggers\\FileLogger.cs",
+              "RelativeDocumentMoniker": "IOTask\\Loggers\\FileLogger.cs",
+              "ToolTip": "D:\\IOTask\\IOTask\\Loggers\\FileLogger.cs",
+              "RelativeToolTip": "IOTask\\Loggers\\FileLogger.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAADwv2oAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T16:25:24.652Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ILogger.cs",
+              "DocumentMoniker": "D:\\IOTask\\IOTask\\Loggers\\ILogger.cs",
+              "RelativeDocumentMoniker": "IOTask\\Loggers\\ILogger.cs",
+              "ToolTip": "D:\\IOTask\\IOTask\\Loggers\\ILogger.cs",
+              "RelativeToolTip": "IOTask\\Loggers\\ILogger.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T16:21:51.497Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\IOTask\\IOTask\\Program.cs",
+              "RelativeDocumentMoniker": "IOTask\\Program.cs",
+              "ToolTip": "D:\\IOTask\\IOTask\\Program.cs",
+              "RelativeToolTip": "IOTask\\Program.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAswDcAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T16:21:34.646Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FileInformation.cs",
+              "DocumentMoniker": "D:\\IOTask\\IOTask\\Data\\FileInformation.cs",
+              "RelativeDocumentMoniker": "IOTask\\Data\\FileInformation.cs",
+              "ToolTip": "D:\\IOTask\\IOTask\\Data\\FileInformation.cs",
+              "RelativeToolTip": "IOTask\\Data\\FileInformation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T16:21:21.322Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "JsonSettings.cs",
+              "DocumentMoniker": "D:\\IOTask\\IOTask\\Data\\JsonSettings.cs",
+              "RelativeDocumentMoniker": "IOTask\\Data\\JsonSettings.cs",
+              "ToolTip": "D:\\IOTask\\IOTask\\Data\\JsonSettings.cs",
+              "RelativeToolTip": "IOTask\\Data\\JsonSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T16:21:05.702Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IOTask",
+              "DocumentMoniker": "D:\\IOTask\\IOTask\\IOTask.csproj",
+              "RelativeDocumentMoniker": "IOTask\\IOTask.csproj",
+              "ToolTip": "D:\\IOTask\\IOTask\\IOTask.csproj",
+              "RelativeToolTip": "IOTask\\IOTask.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-01-23T16:19:19.154Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FileProcessor.cs",
+              "DocumentMoniker": "D:\\IOTask\\IOTask\\FileProcessor\\FileProcessor.cs",
+              "RelativeDocumentMoniker": "IOTask\\FileProcessor\\FileProcessor.cs",
+              "ToolTip": "D:\\IOTask\\IOTask\\FileProcessor\\FileProcessor.cs",
+              "RelativeToolTip": "IOTask\\FileProcessor\\FileProcessor.cs",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAswH8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T16:18:42.41Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FileActions.cs",
+              "DocumentMoniker": "D:\\IOTask\\IOTask\\Enums\\FileActions.cs",
+              "RelativeDocumentMoniker": "IOTask\\Enums\\FileActions.cs",
+              "ToolTip": "D:\\IOTask\\IOTask\\Enums\\FileActions.cs",
+              "RelativeToolTip": "IOTask\\Enums\\FileActions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T16:18:40.558Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
